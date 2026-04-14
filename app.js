@@ -1,18 +1,11 @@
-const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
-const UNSPLASH_API_URL = "https://api.unsplash.com/photos/random";
-
-async function getWeather(city = "New York") {
-  const res = await fetch(
-    `${WEATHER_API_URL}?q=${city.replace(/ /g, '+')}&appid=${CONFIG.OPENWEATHER_API_KEY}&units=imperial`
-  );
+async function getWeather(city) {
+  const res = await fetch(`/.netlify/functions/weather?city=${encodeURIComponent(city)}`);
   if (!res.ok) throw new Error("Weather fetch failed");
   return res.json();
 }
 
 async function getUnsplashPhoto(query) {
-  const res = await fetch(
-    `${UNSPLASH_API_URL}?query=${query}&client_id=${CONFIG.UNSPLASH_ACCESS_KEY}`
-  );
+  const res = await fetch(`/.netlify/functions/unsplash?query=${encodeURIComponent(query)}`);
   if (!res.ok) throw new Error("Unsplash fetch failed");
   return res.json();
 }
