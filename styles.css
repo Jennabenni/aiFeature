@@ -1,0 +1,214 @@
+/* ── Reset & Base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  transition: background 0.6s ease, color 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Layout ── */
+header {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+#city-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#city-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#city-input,
+#city-form button,
+.city-btn {
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.55);
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+#city-input {
+  cursor: text;
+  width: 200px;
+}
+
+#city-form button {
+  background: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+}
+
+#city-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#city-input:focus,
+#city-form button:hover,
+.city-btn:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.city-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+main {
+  width: 100%;
+  max-width: 680px;
+  padding: 1rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+section {
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+#weather-description {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+#weather-temp {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+#unsplash-image {
+  width: 100%;
+  max-width: 480px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+#unsplash-credit {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ── Weather Themes ── */
+
+/* Clear — warm, bright, light */
+body.weather-clear {
+  background: linear-gradient(160deg, #fff4cc, #ffe49a);
+  color: #3a2c00;
+}
+
+body.weather-clear section,
+body.weather-clear #unsplash-image {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Clouds — soft, muted, light */
+body.weather-clouds {
+  background: linear-gradient(160deg, #dde3ea, #c5cdd6);
+  color: #1e2a35;
+}
+
+/* Rain — cool, deep, dark */
+body.weather-rain {
+  background: linear-gradient(160deg, #1a2a3a, #0d1b2a);
+  color: #cde0f5;
+}
+
+body.weather-rain section,
+body.weather-rain #unsplash-image {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Drizzle — blue-gray, medium dark */
+body.weather-drizzle {
+  background: linear-gradient(160deg, #2b3d52, #1c2e40);
+  color: #d0dde8;
+}
+
+body.weather-drizzle section,
+body.weather-drizzle #unsplash-image {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Thunderstorm — dramatic, very dark */
+body.weather-thunderstorm {
+  background: linear-gradient(160deg, #12101a, #1e1530);
+  color: #e8e0ff;
+}
+
+body.weather-thunderstorm section,
+body.weather-thunderstorm #unsplash-image {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Snow — clean, icy, light */
+body.weather-snow {
+  background: linear-gradient(160deg, #eaf4fb, #d0eaf8);
+  color: #1a2f3f;
+}
+
+/* Mist / Fog — hazy, soft gray, light */
+body.weather-mist,
+body.weather-fog {
+  background: linear-gradient(160deg, #d8dde0, #bec5cb);
+  color: #1e2628;
+}
+
+/* Fallback */
+body {
+  background: #f5f5f5;
+  color: #222;
+}

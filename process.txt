@@ -1,0 +1,10 @@
+Ai-Powered Feature
+
+
+External API Integration
+- weather data
+- Unsplash
+
+
+Can be a simple one page website with styling.  I would like
+the page to be styled based on the weather being read, if possible.

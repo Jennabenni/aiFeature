@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather + Vibes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>My Forecast, My Day</h1>
+
+    <div id="city-controls">
+      <form id="city-form">
+        <input type="text" id="city-input" placeholder="Enter any city..." autocomplete="off" />
+        <button type="submit">Go</button>
+      </form>
+
+      <div id="city-buttons">
+        <button class="city-btn" data-city="Miami,US">Miami</button>
+        <button class="city-btn" data-city="Seattle,US">Seattle</button>
+        <button class="city-btn" data-city="Denver,US">Denver</button>
+        <button class="city-btn" data-city="New York,US">New York</button>
+        <button class="city-btn" data-city="Phoenix,US">Phoenix</button>
+        <button class="city-btn" data-city="London,GB">London</button>
+        <button class="city-btn" data-city="Tokyo,JP">Tokyo</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="weather">
+      <h2>Current Weather</h2>
+      <p id="weather-description">Loading...</p>
+      <p id="weather-temp"></p>
+    </section>
+
+    <section id="photo">
+      <h2>Photo of the Day</h2>
+      <img id="unsplash-image" src="" alt="Weather-themed photo" />
+      <p id="unsplash-credit"></p>
+    </section>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
