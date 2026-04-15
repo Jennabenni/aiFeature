@@ -1,4 +1,30 @@
  Reflection
 
 
- (1) For the AI Feature exercise, I decided to build a one page website called “My Forecast, My Day”, which utilizes the two different APIs, the “Open Weather” API and the “Unsplash” API.  I had gotten the idea for the weather API from the reading, and decided to ask Claude what other APIs may go with it, as my original idea was something that had the weather, the news, and maybe a world clock.  Claude then was able to recommend to me the Unsplash API (which, I noticed, was also in the module) and it stated that the keyword in weather can create a themed image in Unsplash.  Since the Unsplash and Open Weather APIs were free, I figured it was perfect and created something simple that could meet the requirements and help me get familiar with how APIs work.  (2) I was surprised that the Open Weather API could actually be translated into text that would correlate with the moods I was trying to achieve, as I figured the feedback I would get from the API would be perhaps an image or a window connecting to the website.  (3) While in previous lectures we had discussed not listing the API keys in a public file, as it can be abused by others, I wasn’t sure if this would apply to every API key, or when I would have to make a gitignore.  Rereading this module helped keep the thought of security in my mind, and I did not initialize the repository until I input the keys myself, made sure that they would be in gitignore, and double checked any vulnerabilities.  Then, when it came to deploying this project, Claude recommended Netlify, since environmental keys can be stored safely on Netlify, away from public view, but still work.  The main issue came with permissions attached to the Open Weather API specifically, which happened when I was trying to update the city list, and it kept saying that the city did not exist and would not pull the weather API, which would in turn not pull the Unsplash API – Claude was able to iron this out after I looked at the error messages in the developer tools.  (4) If I had another week, I would perhaps add even more APIs to this website, and perhaps expand and add more pages with more functions.  Claude did recommend a Spotify API, which could recommend songs based on a theme, and I thought it sounded very cool, but the setup would’ve taken me a bit too long, and I wasn’t entirely sure if it was free.  Perhaps some new features could be the music recommendations, a map API, and, if this exists, perhaps a clothing recommendation.  Maybe I can have the YouTube API up as well, and can recommend a video based on the keywords from the weather indicated.
+ (1) For the AI Feature exercise, I decided to build a one page website called “My Forecast, My Day”, 
+which utilizes the two different APIs, the “Open Weather” API and the “Unsplash” API.  I had gotten the
+idea for the weather API from the reading, and decided to ask Claude what other APIs may go with it, as 
+my original idea was something that had the weather, the news, and maybe a world clock.  Claude then was 
+able to recommend to me the Unsplash API (which, I noticed, was also in the module) and it stated that the 
+keyword in weather can create a themed image in Unsplash.  Since the Unsplash and Open Weather APIs were 
+free, I figured it was perfect and created something simple that could meet the requirements and help 
+me get familiar with how APIs work.  (2) I was surprised that the Open Weather API could actually be 
+translated into text that would correlate with the moods I was trying to achieve, as I figured the 
+feedback I would get from the API would be perhaps an image or a window connecting to the website.  
+(3) While in previous lectures we had discussed not listing the API keys in a public file, as it 
+can be abused by others, I wasn’t sure if this would apply to every API key, or when I would have 
+to make a gitignore.  Rereading this module helped keep the thought of security in my mind, and I 
+did not initialize the repository until I input the keys myself, made sure that they would be in 
+gitignore, and double checked any vulnerabilities.  Then, when it came to deploying this project, 
+Claude recommended Netlify, since environmental keys can be stored safely on Netlify, away from 
+public view, but still work.  The main issue came with permissions attached to the Open Weather 
+API specifically, which happened when I was trying to update the city list, and it kept saying 
+that the city did not exist and would not pull the weather API, which would in turn not pull the 
+Unsplash API – Claude was able to iron this out after I looked at the error messages in the 
+developer tools.  (4) If I had another week, I would perhaps add even more APIs to this website, 
+and perhaps expand and add more pages with more functions.  Claude did recommend a Spotify API, 
+which could recommend songs based on a theme, and I thought it sounded very cool, but the setup 
+would’ve taken me a bit too long, and I wasn’t entirely sure if it was free.  Perhaps some new 
+features could be the music recommendations, a map API, and, if this exists, perhaps a clothing 
+recommendation.  Maybe I can have the YouTube API up as well, and can recommend a video based 
+on the keywords from the weather indicated.
